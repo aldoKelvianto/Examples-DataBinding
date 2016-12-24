@@ -1,21 +1,21 @@
 package com.aldoapps.adbpractice.blog;
 
-import android.databinding.BaseObservable;
-import android.databinding.Bindable;
-
-import static android.databinding.tool.util.GenerationalClassUtil.ExtensionFilter.BR;
+import android.databinding.Observable;
+import android.databinding.PropertyChangeRegistry;
 
 /**
  * Created by aldo on 12/23/16.
  */
 
-public class ArticleObservable extends BaseObservable {
+public class ArticleObservable implements Observable {
     private String title;
     private String excerpt;
     private boolean hightlight;
     private String imageUrl;
     private int commentsNumber;
     private boolean read;
+
+    PropertyChangeRegistry registry;
 
     public ArticleObservable(String title, String excerpt, boolean hightlight, String imageUrl, int commentsNumber) {
         this.title = title;
@@ -35,56 +35,13 @@ public class ArticleObservable extends BaseObservable {
         this.read = read;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    @Override
+    public void addOnPropertyChangedCallback(OnPropertyChangedCallback onPropertyChangedCallback) {
+
     }
 
-    public void setExcerpt(String excerpt) {
-        this.excerpt = excerpt;
-    }
+    @Override
+    public void removeOnPropertyChangedCallback(OnPropertyChangedCallback onPropertyChangedCallback) {
 
-    public void setHightlight(boolean hightlight) {
-        this.hightlight = hightlight;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
-    public void setCommentsNumber(int commentsNumber) {
-        this.commentsNumber = commentsNumber;
-    }
-
-    public void setRead(boolean read) {
-        this.read = read;
-    }
-
-    // =============================
-    // Nothing special in getter
-    // =============================
-
-    public boolean isRead() {
-        return read;
-    }
-
-    public int getCommentsNumber() {
-        return commentsNumber;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public boolean isHightlight() {
-        return hightlight;
-    }
-
-    public String getExcerpt() {
-        return excerpt;
-    }
-
-    @Bindable
-    public String getTitle() {
-        return title;
     }
 }

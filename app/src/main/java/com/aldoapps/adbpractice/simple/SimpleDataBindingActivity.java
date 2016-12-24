@@ -16,7 +16,6 @@ import com.aldoapps.adbpractice.databinding.ActivitySimpleDataBindingBinding;
 
 public class SimpleDataBindingActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

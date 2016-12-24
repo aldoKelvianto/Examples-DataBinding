@@ -1,32 +1,14 @@
 package com.aldoapps.adbpractice.blog;
 
+import android.databinding.ObservableDouble;
+import android.databinding.ObservableField;
+import android.databinding.ObservableLong;
+
 /**
  * Created by aldo on 12/23/16.
  */
 
 public class Article {
-    private String title;
-    private String excerpt;
-    private boolean hightlight;
-    private String imageUrl;
-    private int commentsNumber;
-    private boolean read;
-
-    public Article(String title, String excerpt, boolean hightlight, String imageUrl, int commentsNumber) {
-        this.title = title;
-        this.excerpt = excerpt;
-        this.hightlight = hightlight;
-        this.imageUrl = imageUrl;
-        this.commentsNumber = commentsNumber;
-        this.read = false;
-    }
-
-    public Article(String title, String excerpt, boolean hightlight, String imageUrl, int commentsNumber, boolean read) {
-        this.title = title;
-        this.excerpt = excerpt;
-        this.hightlight = hightlight;
-        this.imageUrl = imageUrl;
-        this.commentsNumber = commentsNumber;
-        this.read = read;
-    }
+    public final ObservableField<ArticlePOJO> article = new ObservableField<>();
+    public final ObservableLong price = new ObservableLong(31);
 }
