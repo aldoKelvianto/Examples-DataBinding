@@ -2,10 +2,20 @@
 <layout>
 
     <data>
+
+        <import type="android.databinding.ObservableMap"/>
+
         <variable
             name="handphone"
             type="com.aldoapps.adbpractice.newtwoway.Handphone"
         />
+        <variable
+            name="handphoneMap"
+            type="ObservableMap&lt;String, Object&gt;"/>
+        <!--
+            lt and gt is < and > in xml escape characters
+            (less than and greater than) entities
+        -->
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -15,17 +25,17 @@
 
         <TextView android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{handphone.name}"
+            android:text='@{handphoneMap["name"]}'
         />
 
         <TextView android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{handphone.brand}"
+            android:text='@{handphoneMap["brand"]}'
         />
 
         <EditText android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@={handphone.brand}"
+            android:text='@={handphoneMap["brandv"]}'
         />
 
     </LinearLayout>

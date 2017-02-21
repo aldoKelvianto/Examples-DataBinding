@@ -23,6 +23,7 @@ public class NewTwoWayActivity extends AppCompatActivity {
             .setContentView(this, R.layout.activity_new_two_way);
 
         binding.setHandphone(new Handphone("LG G4", "LG"));
+        binding.setHandphoneMap(getHandphoneObservable());
 
     }
 
