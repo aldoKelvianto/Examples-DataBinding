@@ -8,7 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import com.aldoapps.adbpractice.blog.RecyclerViewBindingActivity;
 import com.aldoapps.adbpractice.databinding.ActivityMainBinding;
 import com.aldoapps.adbpractice.eventhandling.EventHandlingActivity;
+import com.aldoapps.adbpractice.newtwoway.NewTwoWayActivity;
 import com.aldoapps.adbpractice.simple.SimpleDataBindingActivity;
+import com.aldoapps.adbpractice.twoway.TwoWayActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,9 +23,16 @@ public class MainActivity extends AppCompatActivity {
 
         // Notice that in XML, the id is btn_simple_data
         binding.btnSimpleData.setOnClickListener(v -> goToSimpleDataBinding());
+        binding.btnTwoWay.setOnClickListener(v -> goToTwoWayActivity());
+        binding.btnNewTwoWay.setOnClickListener(v -> goToNewTwoWay());
 
         binding.btnRecyclerViewBinding.setOnClickListener(v -> goToRecyclerViewBinding());
         binding.btnEventHandling.setOnClickListener(v -> goToEventHandling());
+    }
+
+    private void goToNewTwoWay() {
+        Intent intent = new Intent(this, NewTwoWayActivity.class);
+        startActivity(intent);
     }
 
     private void goToEventHandling() {
@@ -38,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToSimpleDataBinding() {
         Intent intent = new Intent(this, SimpleDataBindingActivity.class);
+        startActivity(intent);
+    }
+
+    private void goToTwoWayActivity() {
+        Intent intent = new Intent(this, TwoWayActivity.class);
         startActivity(intent);
     }
 

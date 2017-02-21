@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data />
+    <data/>
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
         </android.support.design.widget.AppBarLayout>
 
@@ -44,14 +44,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Event Handling"
-                />
+            />
 
             <Button
                 android:id="@+id/btnRecyclerViewBinding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Recycler View Binding"
-                />
+            />
+
+            <Button
+                android:id="@+id/btn_two_way"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Two Way Data Binding"/>
+
+            <Button
+                android:id="@+id/btn_new_two_way"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Another Two Way Data Binding"/>
 
         </LinearLayout>
 
